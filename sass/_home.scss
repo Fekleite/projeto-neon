@@ -79,18 +79,269 @@
         &.circle {
           top: 2.8rem;
           right: 4.3rem;
+          max-width: 55.3rem;
         }
 
         &.card-front {
           top: 4.1rem;
           left: 0;
           z-index: 2;
+          max-width: 43.5rem;
         }
 
         &.card-back {
           bottom: 4.6rem;
           right: 8.6rem;
           z-index: 1;
+          max-width: 35.2rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(1440px) {
+    .area-image {
+      margin-right: -13.4rem;
+
+      .image {
+        img {
+          &.card-back {
+            right: 3.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(1366px) {
+    .area-image {
+      margin-right: -8.4rem;
+    }
+  }
+
+  @include responsive(1280px) {
+    .area-image {
+      margin-right: -6.4rem;
+    }
+  }
+
+  @include responsive(1150px) {
+    padding-top: 14.5rem;
+    height: 65.6rem;
+
+    .area-text {
+      ul {
+        margin-top: 4.4rem;
+      }
+    }
+
+    .area-image {
+      margin-right: -1.4rem;
+
+      h2 {
+        font-size: 4rem;
+        margin-bottom: 1.4rem;
+      }
+
+      .image {
+        height: 45rem;
+
+        img {
+          &.card-front {
+            max-width: 35rem;
+            top: 6.1rem;
+          }
+
+          &.card-back {
+            max-width: 29rem;
+            bottom: 0;
+          }
+
+          &.circle {
+            max-width: 46rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(991px) {
+    height: 89.1rem;
+    background-size: cover;
+    padding-top: 15rem;
+
+    .container {
+      @include flex(column, center, flex-start);
+    }
+
+    .area-text {
+      @include flex(column, center, flex-start);
+      margin-bottom: 5rem;
+
+      h3, h1 {
+        text-align: center;
+      }
+
+      h3 {
+        margin-bottom: 2.4rem;
+      }
+
+      h1 {
+        margin-bottom: 2.6rem;
+      }
+
+      ul {
+        max-width: 58.8rem;
+        margin-top: 3.9rem;
+  
+        li {
+          .icon {
+            width: 4.4rem;
+            height: 4.4rem;
+          }
+  
+          span {
+            font-size: 1.6rem;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+
+    .area-image {
+      h2 {
+        margin-bottom: 2rem;
+      }
+  
+      .image {
+        max-width: 51.1rem;
+        height: 42.4rem;
+        margin: 0 auto;
+        top: 0;
+  
+        img {
+          position: absolute;
+  
+          &.circle {
+            top: 0;
+            right: 1.3rem;
+            max-width: 42.9rem;
+          }
+  
+          &.card-front {
+            top: 3.5rem;
+            left: 0;
+            z-index: 2;
+            max-width: 34rem;
+          }
+  
+          &.card-back {
+            bottom: 3.6rem;
+            right: 3rem;
+            z-index: 1;
+            max-width: 27.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(600px) {
+    .area-image {
+      .image {
+        max-width: 48.1rem;
+        height: 40.4rem;
+  
+        img {
+          &.circle {
+            max-width: 42.9rem;
+          }
+  
+          &.card-front {
+            top: 2.5rem;
+            max-width: 30rem;
+          }
+  
+          &.card-back {
+            bottom: 6.6rem;
+            max-width: 24.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(480px) {
+    padding-top: 12.4rem;
+    height: 73.9rem;
+
+    .area-text {
+      max-width: 100%;
+
+      h3 {
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        margin-bottom: 3.7rem;
+      }
+
+      ul {
+        margin-top: 3.7rem;
+        max-width: 26rem;
+        gap: 16px;
+        
+        @include flex(column, flex-start, flex-start);
+
+        li {
+          .icon {
+            width: 2rem;
+            height: auto;
+            background: transparent;
+            border-radius: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+
+          span {
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .area-image {
+      h2 {
+        display: none;
+      }
+
+      .image {
+        max-width: 30.5rem;
+        height: 24.8rem;
+  
+        img {
+          position: absolute;
+  
+          &.circle {
+            right: 0;
+            max-width: 26.7rem;
+          }
+  
+          &.card-front {
+            top: 2.9rem;
+            max-width: 21.1rem;
+          }
+  
+          &.card-back {
+            bottom: 0;
+            right: 0.6rem;
+            z-index: 1;
+            max-width: 17rem;
+          }
         }
       }
     }
