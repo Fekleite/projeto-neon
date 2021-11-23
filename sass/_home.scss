@@ -951,6 +951,7 @@
       &.circle {
         right: 0;
         bottom: 0;
+        z-index: 0;
       }
 
       &.mockup-01 {
@@ -960,6 +961,7 @@
       &.mockup-02 {
         top: 0.3rem;
         left: 25.8rem;
+        z-index: 2;
       }
     }
   }

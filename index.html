@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/main.css">
 
@@ -44,7 +45,7 @@
 
   <section class="s-hero">
     <div class="container">
-      <div class="area-text">
+      <div class="area-text" data-aos="fade-right">
         <h3>Abra sua conta, é só baixar o app!</h3>
         <h1>A conta digital certa pra cuidar bem do seu dinheiro</h1>
         
@@ -75,9 +76,9 @@
       </div>
 
       <div class="area-image">
-        <h2>Banco 100% digital</h2>
+        <h2 data-aos="fade-left">Banco 100% digital</h2>
 
-        <div class="image">
+        <div class="image" data-aos="zoom-in">
           <img src="./assets/card-neon-frnt.png" alt="Imagem da frente do cartão" class="card-front">
           <img src="./assets/card-neon-back.png" alt="Imagem da verso do cartão" class="card-back">
           <img src="./assets/circle-cards-neon.svg" alt="Imagem circulo do fundo" class="circle">
@@ -90,11 +91,11 @@
     <div class="container">
       <div class="area-left">
         <div class="area-mockup">
-          <img src="./assets/circle-mockup.svg" class="circle" alt="Imagem de um círculo">
-          <img src="./assets/mockup.svg" class="mockup" alt="Imagem mockup">
+          <img src="./assets/circle-mockup.svg" class="circle" alt="Imagem de um círculo" data-aos="fade-left">
+          <img src="./assets/mockup.svg" class="mockup" alt="Imagem mockup" data-aos="flip-right">
         </div>
 
-        <div class="area-text">
+        <div class="area-text" data-aos="fade-up">
           <div class="icon">
             <img src="./assets/icon-neon.svg" alt="Ícone Neon">
           </div>
@@ -120,7 +121,7 @@
       </div>
 
       <div class="area-right">
-        <div class="main-text">
+        <div class="main-text" data-aos="fade-left">
           <h2>Resolva sua vida direto pelo app Neon!</h2>
 
           <ul>
@@ -159,7 +160,7 @@
           <a class="btn" href="#">Conheça outros produtos</a>
         </div>
 
-        <div class="box-card">
+        <div class="box-card" data-aos="fade-left">
           <div class="text">
             <h2>Neon Pejota</h2>
             <h3>Contas digitais PJ gratuitas para decolar seu negócio!</h3>
@@ -177,13 +178,13 @@
 
   <section class="s-depoimentos">
     <div class="container">
-      <div class="top">
+      <div class="top" data-aos="fade-right">
         <h2><span>Prático, fácil, moderno</span> Você resolve tudo sem estresse 😊</h2>
 
         <div class="swiper-pagination"></div>
       </div>
 
-      <div class="slide-depoimentos">
+      <div class="slide-depoimentos" data-aos="fade-up">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="card-depositions">
@@ -281,7 +282,7 @@
 
   <section class="s-conta-digital">
     <div class="container">
-      <div class="area-text">
+      <div class="area-text" data-aos="fade-right">
         <h2>
           <span>Aproveite</span>
           Domine o seu dinheiro com uma conta 100% digital
@@ -323,9 +324,9 @@
       </div>
 
       <div class="area-image">
-        <img src="./assets/mockup-01.svg" class="mockup-01" alt="">
-        <img src="./assets/mockup-02.png" class="mockup-02" alt="">
-        <img src="./assets/circle-conta-digital.svg" class="circle" alt="">
+        <img src="./assets/mockup-01.svg" class="mockup-01" alt="" data-aos="fade-up">
+        <img src="./assets/mockup-02.png" class="mockup-02" alt="" data-aos="fade-down">
+        <img src="./assets/circle-conta-digital.svg" class="circle" alt="" data-aos="zoom-in">
       </div>
     </div>
   </section>
@@ -428,8 +429,9 @@
   </footer>
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Initialize Swiper -->
+  <!-- Initialize Swiper and AOS -->
   <script>
     var swiper = new Swiper(".slide-depoimentos", {
       slidesPerView: 3,
@@ -453,6 +455,11 @@
           spaceBetween: 32,
         }
       }
+    });
+
+    AOS.init({
+      duration: 1000,
+      once: true
     });
   </script>
 </body>
