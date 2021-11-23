@@ -27,6 +27,7 @@ footer {
 
   .middle {
     @include flex(row, flex-start, space-between);
+    gap: 16px;
     border-bottom: 2px solid rgba(73, 196, 253, 0.2);
     padding-bottom: 6.2rem;
     margin-bottom: 3.9rem;
@@ -115,6 +116,158 @@ footer {
       font-size: 1.4rem;
       line-height: 150%;
       color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  @include responsive(1050px) {
+    .middle {
+      nav {
+        max-width: 76rem;
+      }
+    }
+  }
+
+  @include responsive(991px) {
+    .middle {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+
+      nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 6rem 0;
+
+        .item {
+          width: 33%;
+        }
+      }
+
+      .btns {
+        position: absolute;
+        right: 0;
+        bottom: 100px;
+      }
+    }
+
+    .bottom {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      p {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .middle {
+      padding-bottom: 8.6rem;
+      margin-bottom: 6.2rem;
+
+      nav {
+        .item {
+          strong {
+            font-size: 1.8rem;
+          }
+
+          ul {
+            li {
+              a {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+      }
+      
+      .btns {
+        bottom: 110px;
+
+        button {
+          padding: 0 3.2rem;
+
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(600px) {
+    .middle {
+      .btns {
+        max-width: 25rem;
+
+        button {
+          padding: 0 2.4rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(480px) {
+    .top {
+      padding: 4.6rem 0;
+      margin-bottom: 5.2rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+
+      .share {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+
+    .middle {
+      gap: 40px;
+      padding-bottom: 0;
+      margin-bottom: 5rem;
+      border: 0;
+
+      nav {
+        gap: 5.7rem 0;
+
+        .item {
+          width: 50%;
+        }
+      }
+
+      .btns {
+        position: initial;
+        max-width: 100%;
+
+        button {
+          justify-content: center;
+
+          .info {
+            width: 100%;
+            align-items: center;
+
+            strong, span {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      p {
+        margin-left: 0;
+        text-align: center;
+      }
     }
   }
 }
